@@ -5,7 +5,7 @@ const person = {
 };
 
 function fullName(person) {
-    return ` First Name: ${person.firstName}, Last Name: ${person.lastName}, Age: ${person.age}`;
+    return `First Name: ${person.firstName}, Last Name: ${person.lastName}, Age: ${person.age}`;
 }
 
 console.log(fullName(person));

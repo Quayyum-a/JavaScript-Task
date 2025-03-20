@@ -10,8 +10,8 @@ function isEven(number){
     return number % 2 === 0;
 }
 
-function isLeapYear(number){
-    return (number % 4 === 0 && number % 100!== 0) || number % 400 === 0;
+function isLeapYear(year){
+    return (year % 4 === 0 && year % 100!== 0) || year % 400 === 0;
 }
 
 function countVowels(word){
