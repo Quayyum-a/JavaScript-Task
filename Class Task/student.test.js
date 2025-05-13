@@ -63,9 +63,23 @@ test('filter unhealthy snacks', () => {
       { name: 'Soda', category: 'Beverages', isHealthy: false }
     ];
     let result = getHealthySnacks(shoppingList);
-    expect(result).toEqual(["Apples", "Carrots", "Greek Yogurt"]);
+    expect(result).toEqual([{
+      name: 'Apples',
+      category: 'Fruits',
+      isHealthy: true
+    },
+  {
+      name: 'Carrots',
+      category: 'Vegetables',
+      isHealthy: true
+    },
+  {
+      name: 'Greek Yogurt',
+      category: 'Dairy',
+      isHealthy: true
+    }]);
+  });
 
-});
 
 test('get items that total cost is above 100', () => {
   const orders = [

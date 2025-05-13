@@ -10,10 +10,12 @@ function squareNumbers(arr){
   return arr.map(score => score * score);
 }
 
-function distributeBooks(members, book){
+function distributeBooks(members, books) {
   let result = {};
-  for (let count = 0; count < members.length; count++) {
-    result[members[count]] = book[count];
+  let count = 0;
+  for (let member of members) {
+    result[member] = books[count];
+    count++;
   }
   return result;
 }
@@ -42,12 +44,16 @@ function convertToLetterGrades(arr) {
 
 function getHealthySnacks(arr) {
   let healthyItems = arr.filter(snack => snack.isHealthy === true);
-  return healthyItems.map(snack => snack.name);
+  healthyItems.forEach(snack => console.log(snack.name));
+  return healthyItems; 
 }
 
 function getOrdersAbove100(orders) {
   return orders
-    .map(order => ({...order, total: order.items.reduce((sum, item) => sum + item.price * item.quantity, 0)}))
+    .map(order => ({
+      ...order,
+      total: order.items.reduce((sum, item) => sum + item.price * item.quantity, 0)
+    }))
     .filter(order => order.total > 100)
     .map(order => ({
       id: order.id,
