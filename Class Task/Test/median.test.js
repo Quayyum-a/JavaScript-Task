@@ -1,4 +1,4 @@
-const{getMedian} = require('./median.js');
+const{getMedian} = require('../src/median.js');
 
 test('find the median of two array of numbers', () => {
   let array1 = [2, 3, 4,];

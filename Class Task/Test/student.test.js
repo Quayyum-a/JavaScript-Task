@@ -1,4 +1,4 @@
-const{getScores, addScore, squareNumbers, distributeBooks, findClass, calculateTotal, convertToLetterGrades, getHealthySnacks, getOrdersAbove100, getDiscountedProducts} = require('./student.js');
+const{getScores, addScore, squareNumbers, distributeBooks, findClass, calculateTotal, convertToLetterGrades, getHealthySnacks, getOrdersAbove100, getDiscountedProducts} = require('../src/student.js');
 
 test('get scores of student above 70', () => {
  let testScores = [87,54,74,42,43,79,90,32,65,98];
